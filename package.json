@@ -6,9 +6,13 @@
   "scripts": {
     "lint": "standard"
   },
+  "standard":{
+    "parser":"babel-eslint"
+  },
   "author": "Paul Cuichan",
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "standard": "^10.0.3"
   }
 }
