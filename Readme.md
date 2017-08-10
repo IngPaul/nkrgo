@@ -42,12 +42,7 @@ Herramienta para correr test
             "test": "npm run lint && ava"
         },
         ```
-+ 3. Aumentar en el archivo de package.json, en el bloque de scripts la variable lint
-        ```
-        "standard": {
-            "parser": "babel-eslint"
-        }
-        ```
-+ 4. Ejecutar comando
+
++ 3. Ejecutar comando
 `npm run lint`
 
