@@ -80,6 +80,14 @@ Para agregar la sintaxis de EM6
 ```
  "nmon": "nodemon --exec 'npm run test'"
 ```
+## BABEL TRANSPILER Y AVA
+
+
+
+## GRAPHQL
+### Intalacion de dependencias
+`yarn add express body-parser graphql graphql-server-express graphql-tools`
+
 
 
 # APUNTES

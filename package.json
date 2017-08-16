@@ -6,13 +6,20 @@
   "scripts": {
     "lint": "standard",
     "test": "npm run lint && ava",
-    "nmon": "nodemon --exec 'npm run test'"
+    "nmon": "nodemon --exec 'npm run test'",
+    "lintfix": "standard",
+    "nmonfix": "nodemon --exec 'npm run lintfix'"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
   },
   "standard": {
     "parser": "babel-eslint",
-     "ignore": [
-          "/src/model/util_model/conect.js"
-      ]
+    "ignore": [
+      "/src/model/util_model/conect.js"
+    ]
   },
   "author": "Paul Cuichan",
   "license": "MIT",
@@ -28,6 +35,9 @@
     "body-parser": "^1.17.2",
     "connect-multiparty": "^2.0.0",
     "express": "^4.15.4",
+    "graphql": "^0.10.5",
+    "graphql-server-express": "^1.1.0",
+    "graphql-tools": "^1.2.1",
     "jwt-simple": "^0.5.1",
     "moment": "^2.18.1",
     "mongoose": "^4.11.6",
