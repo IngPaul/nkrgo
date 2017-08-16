@@ -82,6 +82,28 @@ Para agregar la sintaxis de EM6
 ```
 
 
+# APUNTES
+## CLEAR CACHE GIT
+`Utill cuando se agrega un archivo .gitignore`
 
+````
+git rm -r --cached .
+git add .
+git commit -am 'git cache cleared'
+git push
+````
+## YARN VS NPM
+https://yarnpkg.com/en/docs/migrating-from-npm
+
+`Inicializacion de un proyecto`
+
+yarn init  /  npm init
+
+`Instalacion de una dependencia de desarrollo`
+
+npm install --save-dev [package]  /  yarn add [package] [--dev/-D]
+
+`Instalacion de una dependencia para el proyeto`
+npm install --save [package]  /  yarn add [package]
 
 
