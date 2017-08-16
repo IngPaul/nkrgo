@@ -1,0 +1,1 @@
+{"version":3,"sources":["../server/index.js"],"names":[],"mappings":";;AAAA;;;;;;AACA,oBAAK,wBAAL","file":"index.js","sourcesContent":["import test from './test'\ntest('BABEL IS PRODUCTION   ')\n"]}

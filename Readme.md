@@ -80,8 +80,25 @@ Para agregar la sintaxis de EM6
 ```
  "nmon": "nodemon --exec 'npm run test'"
 ```
-## BABEL TRANSPILER Y AVA
+## BABEL Y AVA
++ Instalar babel
+````
+yarn add babel-cli babel-preset-es2015 babel-preset-stage-2 --dev
 
+yarn add babel-register 
+````
++ Anadir en el archivo package.json el script start
+    ````
+    "scripts": {
+        "start": "babel-node server/index.js"
+    }
+    ````
++ Crear archivo .babelrc y anadir los presets
+    ````
+    "scripts": {
+        "start": "babel server/index.js"
+    }
+    ````
 
 
 ## GRAPHQL
