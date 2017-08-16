@@ -8,21 +8,17 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && mkdir dist && babel server -s -d dist",
     "production": "npm run build && node bin/production",
-
     "lint": "standard",
     "test2": "standard && ava",
     "nmon": "nodemon --exec 'npm run test2'",
     "lintfix": "standard",
     "nmonfix": "nodemon --exec 'npm run lintfix'",
-    
-
     "test": "npm run test-ava && npm run test-mocha",
     "test-ava": "time -f'%E' ava src/ava-tests/ --require babel-register",
     "test-ava:no-cache": "time -f'%E' ava src/ava-tests/ --require babel-register --no-cache",
     "test-ava:watch": "nodemon --watch src/ava-tests/ --exec 'time -f'%E' ava src/ava-tests/ --require babel-register'",
     "test-mocha": "time -f'%E' mocha --opts mocha.opts",
     "test-mocha:watch": "mocha --opts mocha.opts --watch"
-
   },
   "ava": {
     "require": [
@@ -58,6 +54,7 @@
     "graphql-server-express": "^1.1.0",
     "graphql-tools": "^1.2.1",
     "jwt-simple": "^0.5.1",
+    "mocha": "^3.5.0",
     "moment": "^2.18.1",
     "mongoose": "^4.11.6",
     "mongoose-pagination": "^1.0.0"

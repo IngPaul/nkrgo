@@ -77,7 +77,7 @@ Para agregar la sintaxis de EM6
     `npm run lint`
 
 ## PRUEBAS MOCHA
-  `yarn add mocha           `
+  `yarn add mocha`
 ## ~~Pruebas AVA~~
 Herramienta para correr test
 
