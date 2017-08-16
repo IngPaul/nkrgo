@@ -5,15 +5,32 @@
   "main": "index.js",
   "scripts": {
     "lint": "standard",
-    "test": "npm run lint && ava"
+    "test": "npm run lint && ava",
+    "nmon": "nodemon --exec 'npm run test'"
   },
-  "standard":{
-    "parser":"babel-eslint"
+  "standard": {
+    "parser": "babel-eslint",
+     "ignore": [
+          "/src/model/util_model/conect.js"
+      ]
   },
   "author": "Paul Cuichan",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^0.21.0",
     "babel-eslint": "^7.2.3",
+    "nodemon": "^1.11.0",
+    "onchange": "^3.2.1",
     "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "connect-multiparty": "^2.0.0",
+    "express": "^4.15.4",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.6",
+    "mongoose-pagination": "^1.0.0"
   }
 }

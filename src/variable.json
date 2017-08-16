@@ -1,0 +1,6 @@
+{
+    "db":{
+        "url_mongo_test":"mongodb://localhost/nkrgo",
+        "url_mongo":"mongodb://localhost/nkrgo"
+    }
+}

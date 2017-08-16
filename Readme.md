@@ -11,6 +11,7 @@ Normalizar el codigo evita errores en sintaxis de codigo y mantiene un codigo li
             "lint": "standard"
         }
         ```
++ 3. Descargar plugin para visual studio code vscode-standardjs.
 + 3. Ejecutar comando
 `npm run lint`
 
@@ -45,4 +46,42 @@ Herramienta para correr test
 
 + 3. Ejecutar comando
 `npm run lint`
+
+
+## 2. EXPRESS API
+Para agregar la sintaxis de EM6
+`npm install express --save`
+
+### ENCRIPTACION DE CONTRASENIAS
+`npm install bcrypt-nodejs --save`
+
+### PARSE DE LOS DATOS QUE NOS LLEGUEN POR PETICIONES HTTP
+`npm install body-parser --save`
+
+### USAR HTTP PARA SUBIR FICHEROS
+`npm install connect-multiparty --save`
+
+### USAR TOKENS PARA AUTENTIFICACION CON JWTOKEM
+`npm install jwt-simple --save`
+
+### USAR MOMENT PARA FECHAS
+`npm install moment --save`
+
+### MONGOOSE PARA BASE DE DATOS
+`npm install mongoose --save`
+
+### HACER PAGINACION CON MONGOOSE
+`npm install mongoose-pagination --save`
+
+### NODEMOON PARA RECOMPILACION AUTOMATICA
+`npm install nodemon --save-dev`
++   Anadir al bloque script del archivo package.json la variable nmon
+
+```
+ "nmon": "nodemon --exec 'npm run test'"
+```
+
+
+
+
 
