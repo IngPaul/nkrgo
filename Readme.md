@@ -19,6 +19,7 @@
     ````
 
 3 Anadir en el archivo package.json el bloque de scripts 
+   
     ````
     "start": "node bin/dev",
     "clean": "rm -rf dist",
@@ -55,6 +56,8 @@ Normalizar el codigo evita errores en sintaxis de codigo y mantiene un codigo li
 
    `npm run lint`
 
+
+
 ## **BABEL ESLINT**
 Para agregar la sintaxis de EM6
 
@@ -73,6 +76,8 @@ Para agregar la sintaxis de EM6
 
     `npm run lint`
 
+## PRUEBAS MOCHA
+  `yarn add mocha           `
 ## ~~Pruebas AVA~~
 Herramienta para correr test
 
@@ -166,3 +171,10 @@ npm install --save-dev [package]  /  yarn add [package] [--dev/-D]
 npm install --save [package]  /  yarn add [package]
 
 
+## GIT
+### CONFIGURAR GIT CON SSH
+1. En la esquina superior derecha de git,  haga click en su perfil foto, y despues en settings.
+
+2. En la barra de navegacion vertical izquierda selecciona la opcion `SSH keys and GpKey`.
+
+3. Aniada su clave publica con el boton `New SSH Key`.

@@ -2,7 +2,7 @@
   "name": "nkrgo-db",
   "version": "1.0.0",
   "description": "Nkego Database Client",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "start": "node bin/dev",
     "clean": "rm -rf dist",
@@ -10,10 +10,19 @@
     "production": "npm run build && node bin/production",
 
     "lint": "standard",
-    "test": "standard && ava",
-    "nmon": "nodemon --exec 'npm run test'",
+    "test2": "standard && ava",
+    "nmon": "nodemon --exec 'npm run test2'",
     "lintfix": "standard",
-    "nmonfix": "nodemon --exec 'npm run lintfix'"
+    "nmonfix": "nodemon --exec 'npm run lintfix'",
+    
+
+    "test": "npm run test-ava && npm run test-mocha",
+    "test-ava": "time -f'%E' ava src/ava-tests/ --require babel-register",
+    "test-ava:no-cache": "time -f'%E' ava src/ava-tests/ --require babel-register --no-cache",
+    "test-ava:watch": "nodemon --watch src/ava-tests/ --exec 'time -f'%E' ava src/ava-tests/ --require babel-register'",
+    "test-mocha": "time -f'%E' mocha --opts mocha.opts",
+    "test-mocha:watch": "mocha --opts mocha.opts --watch"
+
   },
   "ava": {
     "require": [
