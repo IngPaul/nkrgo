@@ -1,42 +1,87 @@
 # NKRGO
-## 1. LINTER ESLINT
+## BABEL 
+1. Instalar babel
+    ````
+    yarn add babel-cli babel-preset-es2015 babel-preset-stage-2 --dev
+
+    yarn add babel-register 
+    ````
+2. Crear carpeta /bin y archivos 
+    
+    /bin/dev.js => apuntara al archivo del proyecto
+    ````
+    require('babel-register')
+    require('./../server/index')
+    ````
+    /bin/production.js => apuntara al archivo del proyecto transpilado
+    ````
+    require('./../dist/index')
+    ````
+
+3 Anadir en el archivo package.json el bloque de scripts 
+    ````
+    "start": "node bin/dev",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && babel server -s -d dist",
+    "production": "npm run build && node bin/production",
+
+    ````
+4. Crear archivo .babelrc y anadir los presets
+    ````
+    "scripts": {
+        "start": "babel server/index.js"
+    }
+    ````
+
+## **LINTER ESLINT**
 Normalizar el codigo evita errores en sintaxis de codigo y mantiene un codigo limpio y sujeto a reglas.
 
-+ 1. Instalar libreria standard
+1. Instalar libreria standard
 
- `npm install standard --save-dev`
-+ 2. Aumentar en el archivo de package.json, en el bloque de scripts la variable lint
-        ```
-        "scripts": {
-            "lint": "standard"
-        }
-        ```
-+ 3. Descargar plugin para visual studio code vscode-standardjs.
-+ 3. Ejecutar comando
-`npm run lint`
+    `npm install standard --save-dev`
 
-## 2. BABEL ESLINT
+2. Aumentar en el archivo de package.json, en el bloque de scripts la variable lint
+
+    ```
+    "scripts": {
+        "lint": "standard"
+    }
+    ```
+3. Descargar plugin para visual studio code 
+
+    vscode-standardjs.
+
+4. Ejecutar comando
+
+   `npm run lint`
+
+## **BABEL ESLINT**
 Para agregar la sintaxis de EM6
 
-+ 1. Instalar libreria babel-eslint
+1. Instalar libreria babel-eslint
 
- `npm install babel-eslint --save-dev`
-+ 2. Aumentar en el archivo de package.json, un bloque nuevo llamado standard
-        ```
-        "standard": {
-            "parser": "babel-eslint"
-        }
-        ```
-+ 3. Ejecutar comando
-`npm run lint`
+    `npm install babel-eslint --save-dev`
 
-## 3. Pruebas AVA 
+2. Aumentar en el archivo de package.json, un bloque nuevo llamado standard
+
+    ```
+    "standard": {
+        "parser": "babel-eslint"
+    }
+    ```
+3. Ejecutar comando
+
+    `npm run lint`
+
+## ~~Pruebas AVA~~
 Herramienta para correr test
 
-+ 1. Instalar libreria babel-eslint
+1. Instalar libreria babel-eslint
+    
+    `npm install ava --save-dev`
 
- `npm install ava --save-dev`
-+ 2. Aumentar en el bloque script la variable test
+2. Aumentar en el bloque script la variable test
+
         ```
         "scripts": {
             "lint": "standard",
@@ -44,67 +89,56 @@ Herramienta para correr test
         },
         ```
 
-+ 3. Ejecutar comando
-`npm run lint`
+3. Ejecutar comando para probar
+
+    `npm run lint`
 
 
-## 2. EXPRESS API
-Para agregar la sintaxis de EM6
-`npm install express --save`
+## **DEPENDENCIAS NECESARIAS PARA CONSTRUIR UN REST API**
+* EXPRESS
 
-### ENCRIPTACION DE CONTRASENIAS
-`npm install bcrypt-nodejs --save`
+  `npm install express --save`
 
-### PARSE DE LOS DATOS QUE NOS LLEGUEN POR PETICIONES HTTP
-`npm install body-parser --save`
+* ENCRIPTACION DE CONTRASENIAS
 
-### USAR HTTP PARA SUBIR FICHEROS
-`npm install connect-multiparty --save`
+  `npm install bcrypt-nodejs --save`
 
-### USAR TOKENS PARA AUTENTIFICACION CON JWTOKEM
-`npm install jwt-simple --save`
+* PARSE DE LOS DATOS QUE NOS LLEGUEN POR PETICIONES HTTP
+  `npm install body-parser --save`
 
-### USAR MOMENT PARA FECHAS
-`npm install moment --save`
+* USA HTTP PARA SUBIR FICHEROS
+  
+  `npm install connect-multiparty --save`
 
-### MONGOOSE PARA BASE DE DATOS
-`npm install mongoose --save`
+* USAR TOKENS PARA AUTENTIFICACION CON JWTOKEM
+  
+  `npm install jwt-simple --save`
 
-### HACER PAGINACION CON MONGOOSE
-`npm install mongoose-pagination --save`
+* USAR MOMENT PARA FECHAS
+  
+  `npm install moment --save`
 
-### NODEMOON PARA RECOMPILACION AUTOMATICA
-`npm install nodemon --save-dev`
-+   Anadir al bloque script del archivo package.json la variable nmon
+* MONGOOSE PARA BASE DE DATOS
+  
+  `npm install mongoose --save`
 
-```
- "nmon": "nodemon --exec 'npm run test'"
-```
-## BABEL Y AVA
-+ Instalar babel
-````
-yarn add babel-cli babel-preset-es2015 babel-preset-stage-2 --dev
+* HACER PAGINACION CON MONGOOSE
+  
+  `npm install mongoose-pagination --save`
 
-yarn add babel-register 
-````
-+ Anadir en el archivo package.json el script start
-    ````
-    "scripts": {
-        "start": "babel-node server/index.js"
-    }
-    ````
-+ Crear archivo .babelrc y anadir los presets
-    ````
-    "scripts": {
-        "start": "babel server/index.js"
-    }
-    ````
+* NODEMOON PARA RECOMPILACION AUTOMATICA
+  `npm install nodemon --save-dev`
+  
+  - Anadir al bloque script del archivo package.json la variable nmon
+    ```
+    "nmon": "nodemon --exec 'npm run test'"
+    ```
 
 
 ## GRAPHQL
-### Intalacion de dependencias
-`yarn add express body-parser graphql graphql-server-express graphql-tools`
+1. Intalacion de dependencias
 
+   `yarn add express body-parser graphql graphql-server-express graphql-tools`
 
 
 # APUNTES

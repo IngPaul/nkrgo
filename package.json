@@ -10,7 +10,7 @@
     "production": "npm run build && node bin/production",
 
     "lint": "standard",
-    "test": "npm run lint && ava",
+    "test": "standard && ava",
     "nmon": "nodemon --exec 'npm run test'",
     "lintfix": "standard",
     "nmonfix": "nodemon --exec 'npm run lintfix'"
@@ -23,7 +23,8 @@
   "standard": {
     "parser": "babel-eslint",
     "ignore": [
-      "/src/model/util_model/conect.js"
+      "/src/model/util_model/conect.js",
+      "/dist"
     ]
   },
   "author": "Paul Cuichan",
