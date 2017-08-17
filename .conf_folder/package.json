@@ -1,0 +1,26 @@
+{
+  "name": "nkrgo-db",
+  "version": "1.0.0",
+  "description": "Nkego Database Client",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "babel-node server/index.js",
+    "start": "nodemon server/index.js --exec babel-node",  
+    "build": "babel server -d dist --presets es2015,stage-2",
+    "serve": "node dist/index.js",
+    "production": "npm run build && npm run serve"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "/dist"
+    ]
+  },
+  "author": "Paul Cuichan",
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "dependencies": {
+    
+  }
+}

@@ -1,10 +1,11 @@
 # NKRGO
 ## BABEL 
 1. Instalar babel
-    ````
-    yarn add babel-cli babel-preset-es2015 babel-preset-stage-2 --dev
 
-    yarn add babel-register 
+    * Instalar babel-cli: `yarn add babel-cli --dev`
+    * Instalar algunos presets: `yarn add babel-preset-es2015 babel-preset-stage-2 --dev`
+
+    yarn add babel-register ~~babel-polyfill~~
     ````
 2. Crear carpeta /bin y archivos 
     
@@ -33,6 +34,15 @@
         "start": "babel server/index.js"
     }
     ````
+## PRUEBAS MOCHA
+1. Instalar mocha
+  `yarn add mocha --dev`
+2. Anadir al archivo package en el bloque de lso scripts
+    ```
+    "testmocka": "mocha src/test/mocha-tests"
+    ```
+3. Ejecutar el comando
+  npm run testmocka
 
 ## **LINTER ESLINT**
 Normalizar el codigo evita errores en sintaxis de codigo y mantiene un codigo limpio y sujeto a reglas.
@@ -76,8 +86,7 @@ Para agregar la sintaxis de EM6
 
     `npm run lint`
 
-## PRUEBAS MOCHA
-  `yarn add mocha`
+
 ## ~~Pruebas AVA~~
 Herramienta para correr test
 

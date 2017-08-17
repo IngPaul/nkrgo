@@ -1,10 +1,17 @@
 'use strict';
 
-var _test = require('./test');
+var _express = require('express');
 
-var _test2 = _interopRequireDefault(_test);
+var _express2 = _interopRequireDefault(_express);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _test2.default)('BABEL IS PRODUCTION   ');
-//# sourceMappingURL=index.js.map
+var bodyParser = require('body-parser'); // eslint-disable-line 
+var app = (0, _express2.default)();
+var PORT = 5678;
+app.get('/', function (req, res) {
+  res.send('Url Base!');
+});
+app.listen(PORT, function () {
+  console.log('Servidor Activo\n');
+});
