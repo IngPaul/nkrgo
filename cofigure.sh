@@ -1,3 +1,5 @@
+cd..
+
 ############################################################################
 #Instalar babel
 yarn add babel-cli babel-preset-es2015 babel-preset-stage-2 --dev
@@ -7,16 +9,6 @@ yarn add babel-register
 #Instalar nodemoon
 yarn add nodemon --dev
 
-############################################################################
-# Para evitar especificar los presets en los comandos babel 
-# (--presets es2015,stage-2) en los bloques de los scripts del archivo
-# package.json
-cp .conf_folder/.babelrc  .babelrc
-
-############################################################################
-# Copiando .gitignore
-
-cp .conf_folder/.gitignore  .gitignore
 
 
 ############################################################################
@@ -54,3 +46,13 @@ COMMENT
 
   
 
+############################################################################
+# Para evitar especificar los presets en los comandos babel 
+# (--presets es2015,stage-2) en los bloques de los scripts del archivo
+# package.json
+cp .conf_folder/.babelrc  .babelrc
+
+############################################################################
+# Copiando .gitignore
+
+cp .conf_folder/.gitignore  .gitignore
