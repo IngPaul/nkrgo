@@ -12,18 +12,6 @@ type User {
 type Query {
   users: [User]
 }
-type Solicitude {
-  id: ID!
-  name: String!
-  lastName: String!
-  email: String!
-  country: String!
-  adress: String!
-}
-type Query {
-  users: [User]
-}
-
 `
 const schema = makeExecutableSchema({
   typeDefs
