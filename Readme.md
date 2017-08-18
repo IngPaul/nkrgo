@@ -49,7 +49,7 @@ Normalizar el codigo evita errores en sintaxis de codigo y mantiene un codigo li
 
 1. Instalar libreria standard
 
-    `npm install standard --save-dev`
+    `yarn add standard --dev`
 
 2. Aumentar en el archivo de package.json, en el bloque de scripts la variable lint
 
@@ -73,7 +73,7 @@ Para agregar la sintaxis de EM6
 
 1. Instalar libreria babel-eslint
 
-    `npm install babel-eslint --save-dev`
+    `yarn add babel-eslint --dev`
 
 2. Aumentar en el archivo de package.json, un bloque nuevo llamado standard
 
@@ -92,7 +92,7 @@ Herramienta para correr test
 
 1. Instalar libreria babel-eslint
     
-    `npm install ava --save-dev`
+    `yarn add ava --dev`
 
 2. Aumentar en el bloque script la variable test
 
@@ -111,37 +111,37 @@ Herramienta para correr test
 ## **DEPENDENCIAS NECESARIAS PARA CONSTRUIR UN REST API**
 * EXPRESS
 
-  `npm install express --save`
+  `yarn add express`
 
 * ENCRIPTACION DE CONTRASENIAS
 
-  `npm install bcrypt-nodejs --save`
+  `yarn add bcrypt-nodejs`
 
 * PARSE DE LOS DATOS QUE NOS LLEGUEN POR PETICIONES HTTP
-  `npm install body-parser --save`
+  `yarn add body-parser`
 
 * USA HTTP PARA SUBIR FICHEROS
   
-  `npm install connect-multiparty --save`
+  `yarn add connect-multiparty`
 
 * USAR TOKENS PARA AUTENTIFICACION CON JWTOKEM
   
-  `npm install jwt-simple --save`
+  `yarn add jwt-simple`
 
 * USAR MOMENT PARA FECHAS
   
-  `npm install moment --save`
+  `yarn add moment`
 
 * MONGOOSE PARA BASE DE DATOS
   
-  `npm install mongoose --save`
+  `yarn add mongoose`
 
 * HACER PAGINACION CON MONGOOSE
   
-  `npm install mongoose-pagination --save`
+  `yarn add mongoose-pagination`
 
 * NODEMOON PARA RECOMPILACION AUTOMATICA
-  `npm install nodemon --save-dev`
+  `yarn add nodemon --dev`
   
   - Anadir al bloque script del archivo package.json la variable nmon
     ```
@@ -152,7 +152,7 @@ Herramienta para correr test
 ## GRAPHQL
 1. Intalacion de dependencias
 
-   `yarn add express body-parser graphql graphql-server-express graphql-tools`
+   `yarn add graphql graphql-server-express graphql-tools`
 
 
 # APUNTES

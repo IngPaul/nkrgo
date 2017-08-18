@@ -4,13 +4,6 @@ cd..
 #Instalar babel
 yarn add babel-cli babel-preset-es2015 babel-preset-stage-2 --dev
 yarn add babel-register
-
-############################################################################
-#Instalar nodemoon
-yarn add nodemon --dev
-
-
-
 ############################################################################
 # Instalacion de mocha para pruebas
 
@@ -24,6 +17,52 @@ yarn add babel-register --dev
 ########
 # Instalacion de slint
 yarn add standard babel-eslint --dev
+
+
+
+## **DEPENDENCIAS NECESARIAS PARA CONSTRUIR UN REST API**
+# EXPRESS
+
+yarn add express
+
+# ENCRIPTACION DE CONTRASENIAS
+
+yarn add bcrypt-nodejs
+
+# PARSE DE LOS DATOS QUE NOS LLEGUEN POR PETICIONES HTTP
+
+yarn add body-parser
+
+# USA HTTP PARA SUBIR FICHEROS
+  
+yarn add connect-multiparty
+
+# USAR TOKENS PARA AUTENTIFICACION CON JWTOKEM
+  
+yarn add jwt-simple
+
+#USAR MOMENT PARA FECHAS
+  
+yarn add moment
+
+#MONGOOSE PARA BASE DE DATOS
+  
+yarn add mongoose
+
+#HACER PAGINACION CON MONGOOSE
+  
+yarn add mongoose-pagination
+
+#NODEMOON PARA RECOMPILACION AUTOMATICA
+yarn add nodemon --dev
+  
+
+
+#######
+# Instalar graphql
+yarn add graphql graphql-server-express graphql-tools
+
+yarn add eslint-plugin-graphql --dev
 
 
 ############################################################################
