@@ -1,15 +1,15 @@
-const { makeExecutableSchema } = require('graphql-tools')
+'use strict'
+import { makeExecutableSchema } from 'graphql-tools'
 const typeDefs = `
 type Curso {
   id: ID!
   titulo: String!
 }
-
 type Query {
   cursos: [Curso]
 }
 `
 const schema = makeExecutableSchema({
-  typeDefs: typeDefs
+  typeDefs
 })
 module.exports = schema
