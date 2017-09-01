@@ -1,5 +1,6 @@
 'use strict'
-import { makeExecutableSchema } from 'graphql-tools'
+import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools'
+import casual from 'casual'
 const typeDefs = `
 scalar Date
 #This is the type user
@@ -87,5 +88,27 @@ const resolvers = {
 const schema = makeExecutableSchema({
   typeDefs,
   resolvers: resolvers
+})
+addMockFunctionsToSchema({
+  schema,
+  mocks: {
+    User: () => {
+      return {
+        id: casual.uuid,
+        name: casual.first_name,
+        lastName: casual.last_name,
+        email: casual.email,
+        country: casual.country,
+        adress: casual.adress
+      }
+    },
+    Solicitude: () => {
+      return {
+        id: casual.uuid,
+        description: casual.sentences(1)
+      }
+    }
+  },
+  preserveResolvers: true
 })
 module.exports = schema

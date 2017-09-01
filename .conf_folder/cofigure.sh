@@ -96,3 +96,6 @@ cp .conf_folder/.babelrc  .babelrc
 
 cp .conf_folder/.gitignore  .gitignore
 
+
+#generar datos falso con formato real
+yarn add casual
