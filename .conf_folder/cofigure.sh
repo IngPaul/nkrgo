@@ -95,3 +95,4 @@ cp .conf_folder/.babelrc  .babelrc
 # Copiando .gitignore
 
 cp .conf_folder/.gitignore  .gitignore
+
