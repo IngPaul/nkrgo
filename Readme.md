@@ -150,9 +150,88 @@ Herramienta para correr test
 
 
 ## GRAPHQL
-1. Intalacion de dependencias
+* Intalacion de dependencias
 
    `yarn add graphql graphql-server-express graphql-tools`
+
+* Creacion de un shema debase de datos
+
+  ```
+    const typeDefs = `
+    enum Genero {
+    MASCULINO
+    FEMENINO
+    }
+    type User {
+        id: ID!
+        name: String!
+        lastName: String!
+        genero: Genero
+    }`
+    const schema = makeExecutableSchema({
+        typeDefs 
+    })
+   ```
+
+* Creacion de resolvers para extraccion de datos
+  ```
+  const resolvers = {
+        Query: {
+            users: () => {
+            return usersBd
+            }
+        },
+        User: {
+            solicitudes: () => {
+            return solicitudesBd
+            }
+        },
+        Solicitude: {
+            delivery: () => {
+                return deliveryBd
+            }
+        }
+    }
+    const schema = makeExecutableSchema({
+        typeDefs,
+        resolvers: resolvers
+    })
+  ```
+
+  `Los arreglos usersBd, solicitudesBd, deliveryBd son arreglos que tienen datos de la base de datos`
+
+* Creacion de Mocks para generacion de datos aleatorios legibles 
+    * Instalacion de casual para generacion de datos aleatorios legibles 
+
+      `yarn add casual`
+
+    * Definicion de la funcion addMockFunctionsToSchema
+       ```
+       addMockFunctionsToSchema({
+            schema,
+            mocks: {
+                User: () => {
+                return {
+                    id: casual.uuid,
+                    name: casual.first_name,
+                    lastName: casual.last_name,
+                    email: casual.email,
+                    country: casual.country,
+                    adress: casual.adress
+                }
+                }
+            },
+            preserveResolvers: true
+         })
+       ```
+
+       `preserveResolvers a true es para que se conserven los datos extraidos en los resolvers`
+
+## CONEXION A BASE DE DATOS
+
+## NEXT
+HACER MIGRACIONES DE BASES DE DATOS Y LLENAR LA BASE DE DATOS ALEATORIOS
+
 
 
 # APUNTES
